@@ -62,6 +62,9 @@ class _AnimateIfVisibleState extends State<AnimateIfVisible>
       duration: widget.duration,
       vsync: this,
     );
+    _wrapper.stack.add(widget.key, () {
+      _controller.forward();
+    });
     super.initState();
   }
 
